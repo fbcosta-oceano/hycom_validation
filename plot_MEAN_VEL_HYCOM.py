@@ -268,10 +268,10 @@ for k in range(0,len(prof[:,0]),1):
                   x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-1.5)
                   teste.quiver(x, y, 0.5, 0, transform=ccrs.PlateCarree(),scale=5.00,width=0.007,headaxislength=5)
 
-               if len(rodada)<=3:
+               if len(rodada)==2:
                   teste.text(min_lon_plot+1, max_lat_plot-1.2, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
-                  teste.text(min_lon_plot+1, max_lat_plot-1.8, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
+                  teste.text(min_lon_plot+1, max_lat_plot-2.4, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
                elif len(rodada)==4:
                   teste.text(min_lon_plot+1, max_lat_plot-1.0, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
@@ -281,10 +281,10 @@ for k in range(0,len(prof[:,0]),1):
 
                if rod==len(rodada)-1:
                   fig.tight_layout()
-                  if len(rodada)<=3:
+                  if len(rodada)==2:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace=0.02)
-                     y_title=1.020
-                     cbar_ax = [0.955, 0.014, 0.02, 0.977]
+                     y_title=0.840
+                     cbar_ax = [0.990, 0.200, 0.02, 0.590]
                   elif len(rodada)==4:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace=-0.16, hspace= 0.02)
                      y_title=1.025
@@ -315,19 +315,19 @@ for k in range(0,len(prof[:,0]),1):
                   x,y = np.meshgrid(lon_hycom_plot[0:-1:5],lat_hycom_plot[0:-1:5])
                   teste.quiver(x,y,u_hycom_plot[0:-1:5,0:-1:5],v_hycom_plot[0:-1:5,0:-1:5], \
                                    transform=ccrs.PlateCarree(),scale=8,width=0.007,headaxislength=5, alpha=0.5)
-                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-1.4)
+                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-1.5)
                   teste.quiver(x, y, 0.5, 0, transform=ccrs.PlateCarree(),scale=8.00,width=0.007,headaxislength=5)
                elif prof[k,1]>=400:
                   x,y = np.meshgrid(lon_hycom_plot[0:-1:5],lat_hycom_plot[0:-1:5])
                   teste.quiver(x,y,u_hycom_plot[0:-1:5,0:-1:5],v_hycom_plot[0:-1:5,0:-1:5], \
                                    transform=ccrs.PlateCarree(),scale=8,width=0.007,headaxislength=5, alpha=0.5)
-                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-1.4)
+                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-1.5)
                   teste.quiver(x, y, 0.5, 0, transform=ccrs.PlateCarree(),scale=8.00,width=0.007,headaxislength=5)
 
-               if len(rodada)<=3:
+               if len(rodada)==2:
                   teste.text(min_lon_plot+1, max_lat_plot-1.2, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
-                  teste.text(min_lon_plot+1, max_lat_plot-1.8, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
+                  teste.text(min_lon_plot+1, max_lat_plot-2.1, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
                elif len(rodada)==4:
                   teste.text(min_lon_plot+1, max_lat_plot-1.0, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
@@ -337,10 +337,10 @@ for k in range(0,len(prof[:,0]),1):
 
                if rod==len(rodada)-1:
                   fig.tight_layout()
-                  if len(rodada)<=3:
+                  if len(rodada)==2:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace=0.02)
-                     y_title=1.020
-                     cbar_ax = [0.87, 0.02, 0.02, 0.97]
+                     y_title=0.820
+                     cbar_ax = [0.990, 0.200, 0.02, 0.590]
                   elif len(rodada)==4:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace=-0.13, hspace= 0.03)
                      y_title=1.025
@@ -372,19 +372,27 @@ for k in range(0,len(prof[:,0]),1):
                   x,y = np.meshgrid(lon_hycom_plot[0:-1:8],lat_hycom_plot[0:-1:8])
                   teste.quiver(x,y,u_hycom_plot[0:-1:8,0:-1:8],v_hycom_plot[0:-1:8,0:-1:8], \
                                    transform=ccrs.PlateCarree(),scale=10,width=0.007,headaxislength=5, alpha=0.5)
-                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-3.3)
+                  if len(rodada)==2:
+                     x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-2.5)
+                  else:
+                     print('DEFINE VECTOR POSITION FOR CBM')
+                     exit()
                   teste.quiver(x, y, 0.5, 0, transform=ccrs.PlateCarree(),scale=10.00,width=0.007,headaxislength=5)
                elif prof[k,1]>=400:
                   x,y = np.meshgrid(lon_hycom_plot[0:-1:8],lat_hycom_plot[0:-1:8])
                   teste.quiver(x,y,u_hycom_plot[0:-1:8,0:-1:8],v_hycom_plot[0:-1:8,0:-1:8], \
                                    transform=ccrs.PlateCarree(),scale=8,width=0.007,headaxislength=5, alpha=0.5)
-                  x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-3.3)
+                  if len(rodada)==2:
+                     x,y = np.meshgrid(min_lon_plot+1,max_lat_plot-2.5)
+                  else:
+                     print('DEFINE VECTOR POSITION FOR CBM')
+                     exit()
                   teste.quiver(x, y, 0.5, 0, transform=ccrs.PlateCarree(),scale=8.00,width=0.007,headaxislength=5)
 
-               if len(rodada)<=3:
-                  teste.text(min_lon_plot+1, max_lat_plot-3, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
+               if len(rodada)==2:
+                  teste.text(min_lon_plot+1, max_lat_plot-1.5, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
-                  teste.text(min_lon_plot+1, max_lat_plot-3.7, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
+                  teste.text(min_lon_plot+1, max_lat_plot-2.2, '0.5 m/s', horizontalalignment='left', fontsize=10, fontweight='bold', \
                                  transform=ccrs.PlateCarree())
                elif len(rodada)==4:
                   teste.text(min_lon_plot+1, max_lat_plot-2.8, legenda[rod], horizontalalignment='left', fontsize=10, fontweight='bold', \
@@ -394,10 +402,10 @@ for k in range(0,len(prof[:,0]),1):
 
                if rod==len(rodada)-1:
                   fig.tight_layout()
-                  if len(rodada)<=3:
+                  if len(rodada)==2:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace=0.02)
-                     y_title=1.020
-                     cbar_ax = [0.92, 0.018, 0.02, 0.972]
+                     y_title=0.800
+                     cbar_ax = [0.990, 0.225, 0.02, 0.525]
                   elif len(rodada)==4:
                      fig.subplots_adjust(bottom=0.0, top=0.99, left=0.0, wspace= 0.02, hspace= 0.02)                
                      y_title=1.020
