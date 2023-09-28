@@ -19,9 +19,12 @@ data_final = str(content_list[4].rstrip('\n'))
 inc_tempo = float(content_list[5].rstrip('\n'))
 inc_assim = float(content_list[6].rstrip('\n'))
 
-output_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados'
-dir_hycom = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/previsao/hycom_2_2_18/proc'
-dir_obs = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/dados_obs/aviso/adt'
+cfg_file='dirs_calc.txt'
+opt=open(cfg_file, "r")
+content_list = opt.readlines()
+output_dir = str(content_list[0].rstrip('\n'))
+dir_hycom = str(content_list[1].rstrip('\n'))
+dir_obs = str(content_list[2].rstrip('\n'))
 
 data_inicial = datetime.datetime(*time.strptime(data_inicial,"%d/%m/%Y")[0:3])
 data_final = datetime.datetime(*time.strptime(data_final,"%d/%m/%Y")[0:3])

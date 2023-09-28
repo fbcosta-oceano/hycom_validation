@@ -32,12 +32,14 @@ woa_levels = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 
               2400, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300, 3400, 3500, \
               3600, 3700, 3800, 3900, 4000, 4100, 4200, 4300, 4400, 4500, 4600, 4700, \
               4800, 4900, 5000, 5100, 5200, 5300, 5400, 5500]
-#print(type(woa_levels))
 woa_levels = np.array(woa_levels)
-#print(type(woa_levels))
-output_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados'
-dir_hycom = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/previsao/hycom_2_2_18/proc'
-dir_obs = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/dados_obs/ARGO/controle_qualidade_argo'
+
+cfg_file='dirs_calc.txt'
+opt=open(cfg_file, "r")
+content_list = opt.readlines()
+output_dir = str(content_list[0].rstrip('\n'))
+dir_hycom = str(content_list[1].rstrip('\n'))
+dir_obs = str(content_list[4].rstrip('\n'))
 
 data_inicial = datetime.datetime(*time.strptime(data_inicial,"%d/%m/%Y")[0:3])
 data_final = datetime.datetime(*time.strptime(data_final,"%d/%m/%Y")[0:3])

@@ -27,15 +27,18 @@ data_inicial = str(content_list[3].rstrip('\n'))
 data_final = str(content_list[4].rstrip('\n'))
 inc_tempo = float(content_list[5].rstrip('\n'))
 
-input_dir = '/home/filipe.costa/resultados'
-fig_output_dir = '/home/filipe.costa/resultados/figs'
+cfg_file='dirs_plot.txt'
+opt=open(cfg_file, "r")
+content_list = opt.readlines()
+input_dir = str(content_list[0].rstrip('\n'))
+fig_output_dir = str(content_list[1].rstrip('\n'))
 
 data_inicial = datetime.datetime(*time.strptime(data_inicial,"%d/%m/%Y")[0:3])
 data_final = datetime.datetime(*time.strptime(data_final,"%d/%m/%Y")[0:3])
 
 months = [1,2,3,4,5,6,7,8,9,10,11,12]
 #months = [7,8,9,10,11]
-#months = [1,2,3,4,5]
+months = [1,2,3,4,5,6,7,8]
 prof = np.array([[0,0], [200,200], [400,400], [800,800], [2000,2000], [4000,4000]])
 #prof = np.array([[0,0]])
 

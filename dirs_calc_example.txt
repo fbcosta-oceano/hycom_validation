@@ -1,0 +1,9 @@
+/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados
+/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/previsao/hycom_2_2_18/proc
+/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/dados_obs/aviso/adt
+
+#FIRST LINE -> OUTPUT DIRECTORIE FOR THE RESULTS
+#SECOND LINE -> INPUT DIRECTORIE FOR THE HYCOM
+#THIRD LINE -> INPUT DIRECTORIE FOR THE AVISO ADT OBSERVATION
+#FOURTH LINE -> INPUT DIRECTORIE FOR THE OSTIA SST OBSERVATION
+#FIFTH LINE -> INPUT DIRECTORIE FOR THE ARGO OBSERVATION

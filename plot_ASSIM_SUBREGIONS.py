@@ -31,8 +31,10 @@ legenda = list(content_list[2].rstrip('\n').split(','))
 
 output_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados/figs'
 dir_hycom = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/previsao/hycom_2_2_18/proc'
-dir_assim = 'assim/slasst_gridded_map_error_or_argoZ_stats/Input'
-sub_file = 'subregions_008i_0256'
+#dir_assim = 'assim/slasst_gridded_map_error_or_argoZ_stats/Input'
+#sub_file = 'subregions_008i_0256'
+dir_assim = 'assim/slasst_gridded_map_error_or_argoZ_stats'
+sub_file = 'subregions'
 
 if '004j' in rodada[0]:
    IDM = 502

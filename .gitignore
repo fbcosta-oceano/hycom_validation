@@ -4,4 +4,6 @@ old_force_pert
 __pycache__
 run.srm
 out.txt
+dirs_plot.txt
+dirs_calc.txt
 .nfs*

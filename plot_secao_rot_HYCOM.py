@@ -13,8 +13,8 @@ import warnings
 from calendar import monthrange
 warnings.filterwarnings("ignore")
 
-#months = [1,2,3,4,5,6,7,8,9,10,11,12]
-months = [1,2,3,4,5]
+months = [1,2,3,4,5,6,7,8,9,10,11,12]
+#months = [1,2,3,4,5,6,7,8]
 
 max_prof_sup = 500
 max_prof_inf = 1500

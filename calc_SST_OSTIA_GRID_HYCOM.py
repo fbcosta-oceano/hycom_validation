@@ -18,9 +18,12 @@ data_final = str(content_list[4].rstrip('\n'))
 inc_tempo = float(content_list[5].rstrip('\n'))
 inc_assim = float(content_list[6].rstrip('\n'))
 
-output_dir = '/home/filipe.costa/resultados'
-dir_hycom = '/home/filipe.costa/previsao/hycom_2_2_18/proc'
-dir_obs = '/home/filipe.costa/dados_obs/get_OSTIA_SST/ostia'
+cfg_file='dirs_calc.txt'
+opt=open(cfg_file, "r")
+content_list = opt.readlines()
+output_dir = str(content_list[0].rstrip('\n'))
+dir_hycom = str(content_list[1].rstrip('\n'))
+dir_obs = str(content_list[3].rstrip('\n'))
 
 data_inicial = datetime.datetime(*time.strptime(data_inicial,"%d/%m/%Y")[0:3])
 data_final = datetime.datetime(*time.strptime(data_final,"%d/%m/%Y")[0:3])

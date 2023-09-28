@@ -22,8 +22,8 @@ data_final = str(content_list[4].rstrip('\n'))
 inc_tempo = float(content_list[5].rstrip('\n'))
 inc_assim = float(content_list[6].rstrip('\n'))
 
-output_dir = '/home/filipe.costa/resultados'
-dir_hycom = '/home/filipe.costa/previsao/hycom_2_2_18/proc'
+output_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados'
+dir_hycom = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/previsao/hycom_2_2_18/proc'
 
 prof = np.array([[0,0], [0,50], [50,50], [100,100], [200,200], [300,300], [400,400], [800,800], [2000,2000], [3000,3000], [4000,4000]])
 #prof = np.array([[0,0], [0,50], [50,50], [100,100], [200,200], [300,300], [400,400], [800,800]])

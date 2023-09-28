@@ -27,8 +27,11 @@ data_inicial = str(content_list[3].rstrip('\n'))
 data_final = str(content_list[4].rstrip('\n'))
 inc_tempo = float(content_list[5].rstrip('\n'))
 
-input_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados'
-fig_output_dir = '/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados/figs'
+cfg_file='dirs_plot.txt'
+opt=open(cfg_file, "r")
+content_list = opt.readlines()
+input_dir = str(content_list[0].rstrip('\n'))
+fig_output_dir = str(content_list[1].rstrip('\n'))
 
 data_inicial = datetime.datetime(*time.strptime(data_inicial,"%d/%m/%Y")[0:3])
 data_final = datetime.datetime(*time.strptime(data_final,"%d/%m/%Y")[0:3])

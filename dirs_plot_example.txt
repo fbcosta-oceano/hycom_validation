@@ -1,0 +1,5 @@
+/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados
+/mnt/nfs/dpns33/data1/home_dpns31/fbcosta/resultados/figs
+
+#FIRST LINE -> DIRECTORIE OF RESULTS SAVED BY cacl_...
+#SECOND LINE -> OUTPUT DIRECTORIE FOR THE FIGURES
